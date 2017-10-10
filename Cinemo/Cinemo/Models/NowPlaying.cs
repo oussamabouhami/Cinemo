@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cinemo
+namespace Cinemo.Models
 {
     class NowPlaying
     {
