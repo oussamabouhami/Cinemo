@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cinemo.Models
 {
-    class NowPlaying
+    public class NowPlaying
     {
 
         public int MovieId { get; set; }
