@@ -20,33 +20,7 @@ namespace Cinemo
             GetMovies();
         }
 
-        /* public async void GetMovies()
-         {
-             //SLMovies.IsVisible = false;
-             try
-             {
-                 SLMovies.IsVisible = true;
-                 HttpClient client = new HttpClient();
-                 var response = await client.GetStringAsync("http://cinemo.azurewebsites.net/api/NowPlayingMovies");
-
-                 var movies = JsonConvert.DeserializeObject<List<NowPlaying>>(response);
-
-                 MovieListView.ItemsSource = movies;
-
-             }
-             catch
-             {
-                 //SLMovies.IsVisible = false;
-                 throw;
-             }
-             finally
-             {
-                 SLMovies.IsVisible = false;
-             }
-         } */
-
-
-        public async Task<List<NowPlaying>> GetMovies()
+        public async void GetMovies()
         {
             SLMovies.IsVisible = false;
 
@@ -59,8 +33,6 @@ namespace Cinemo
                 MovieListView.ItemsSource = movies;
                 SLMovies.IsVisible = true;
 
-                return movies;
-
             }
             catch (Exception e)
             {
@@ -70,9 +42,20 @@ namespace Cinemo
             finally
             {
                 SLLoader.IsVisible = false;
+
             }
+        }
 
+        private void MovieListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedItem = e.SelectedItem as NowPlaying;
 
+            if (selectedItem != null){
+                var movieId = selectedItem.MovieId;
+                Navigation.PushAsync(new MoviesDetail(movieId));
+
+            }
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

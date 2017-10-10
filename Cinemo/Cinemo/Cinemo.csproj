@@ -45,6 +45,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\NowPlaying.cs" />
+    <Compile Include="MoviesDetail.xaml.cs">
+      <DependentUpon>MoviesDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NowPlayingPage.xaml.cs">
       <DependentUpon>NowPlayingPage.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UpComingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MoviesDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

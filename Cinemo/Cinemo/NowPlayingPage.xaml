@@ -6,7 +6,7 @@
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout x:Name="SLMovies" IsVisible="False" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
 
-                <ListView x:Name="MovieListView" HasUnevenRows="True" SeparatorVisibility="None">
+                <ListView x:Name="MovieListView" HasUnevenRows="True" ItemSelected="MovieListView_OnItemSelected" SeparatorVisibility="None" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -19,12 +19,12 @@
 
                                         <Image Source="{Binding PhotoFullPath}" Grid.Column="0" HeightRequest="120" WidthRequest="150"/>
                                         <StackLayout Grid.Column="1">
-                                            <Label Text="{Binding MovieName}"  TextColor="#E91E63" FontAttributes="Bold"/>
-                                            <Label Text="{Binding ShowTime}"/>
-                                            <Label Text="{Binding MovieType}"/>
+                                            <Label Text="{Binding MovieName}"  TextColor="#E84545" FontAttributes="Bold"/>
+                                            <Label Text="{Binding ShowTime}" TextColor="#2B2E4A"/>
+                                            <Label Text="{Binding MovieType}" TextColor="#2B2E4A"/>
                                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                                <Label Text="{Binding RatedPGI}"/>
-                                                <Label HorizontalOptions="EndAndExpand" Text="{Binding Duration}"/>
+                                                <Label Text="{Binding RatedPGI}" TextColor="#2B2E4A"/>
+                                                <Label HorizontalOptions="EndAndExpand" Text="{Binding Duration}" TextColor="#53354A" />
                                             </StackLayout>
                                         </StackLayout>
                                     </Grid>
