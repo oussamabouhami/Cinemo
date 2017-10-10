@@ -94,7 +94,7 @@ namespace Cinemo
              
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 SLLoader.IsVisible = false;
                 throw;

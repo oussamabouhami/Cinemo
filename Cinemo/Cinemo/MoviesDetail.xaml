@@ -6,13 +6,14 @@
         <ScrollView>
 
             <AbsoluteLayout HorizontalOptions="FillAndExpand" 
-                            VerticalOptions="FillAndExpand">
+                            VerticalOptions="FillAndExpand"
+                            Padding="10">
 
                 <Grid x:Name="GridMoviesDetail" 
                       IsVisible="False" 
                       AbsoluteLayout.LayoutFlags="All" 
                       AbsoluteLayout.LayoutBounds="0,0,1,1">
-
+ 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -34,14 +35,14 @@
                                    HeightRequest="180"
                                    WidthRequest="300"/>
                             <StackLayout HeightRequest="200" Grid.Column="1" Margin="20,40,20,0">
-                                <Label x:Name="LblMovieName"  TextColor="#E91E63" FontAttributes="Bold"/>
-                                <Label x:Name="LblLanguage" />
-                                <Label x:Name="LblType" />
-                                <Label x:Name="LblRatedPgi" />
-                                <Label x:Name="LblPrint"/>
-                                <Label x:Name="LblPrice"/>
+                                <Label x:Name="LblMovieName"  TextColor="#E84545" FontAttributes="Bold"/>
+                                <Label x:Name="LblLanguage"  TextColor="#2B2E4A"/>
+                                <Label x:Name="LblType" TextColor="#2B2E4A" />
+                                <Label x:Name="LblRatedPgi" TextColor="#2B2E4A" />
+                                    <Label x:Name="LblPrint" TextColor="#2B2E4A" />
+                                <Label x:Name="LblPrice" TextColor="#2B2E4A" />
                                 <Button x:Name="BtnTrailor" Text="Watch Trailor"
-                                        BackgroundColor="#048c0d" TextColor="White"
+                                        BackgroundColor="#53354A" TextColor="White"
                                         Clicked="BtnTrailor_OnClicked"/>
                             </StackLayout>
                         </Grid>
@@ -49,44 +50,44 @@
 
                     <StackLayout Grid.Row="1">
                         <Label Text="Cast" HorizontalTextAlignment="Center" 
-                               TextColor="#E91E63"
+                               TextColor="#E84545"
                                FontAttributes="Bold"/>
-                        <Label x:Name="LblCast" />
+                        <Label x:Name="LblCast" TextColor="#2B2E4A" />
                     </StackLayout>
 
                     <StackLayout Grid.Row="2">
                         <Label Text="Description"
                                HorizontalTextAlignment="Center"
-                               TextColor="#E91E63" 
+                               TextColor="#E84545" 
                                FontAttributes="Bold"/>
-                        <Label x:Name="LblDescription"></Label>
+                            <Label x:Name="LblDescription" TextColor="#2B2E4A" ></Label>
                     </StackLayout>
 
 
                     <StackLayout Grid.Row="3">
                         <Label Text="Show Date" 
                                HorizontalTextAlignment="Center" 
-                               TextColor="#E91E63" 
+                               TextColor="#E84545" 
                                FontAttributes="Bold"/>
                         <Label x:Name="LblShowTime"
-                               HorizontalTextAlignment="Center"/>
+                               HorizontalTextAlignment="Center" TextColor="#2B2E4A" />
                     </StackLayout>
 
                     <Button Text="Book Order"
                             x:Name="BtnBookOrder"
-                            BackgroundColor="#f20424" 
+                            BackgroundColor="#E84545" 
                             TextColor="White" 
                             Clicked="BtnBookOrder_OnClicked" 
-                            Grid.Row="4" />
+                            Grid.Row="5" />
                 </Grid>
 
                 <StackLayout x:Name="SLLoader" IsVisible="True" Padding="12"
                              AbsoluteLayout.LayoutFlags="PositionProportional"
                              AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
 
-                    <ActivityIndicator IsRunning="True" Color ="#80000000"/>
+                    <ActivityIndicator IsRunning="True" Color ="#2B2E4A"/>
 
-                    <Label Text="Loading..." HorizontalOptions="Center" TextColor="Red"/>
+                    <Label Text="Loading..." HorizontalOptions="Center" TextColor="#E84545"/>
 
                 </StackLayout>
             </AbsoluteLayout>

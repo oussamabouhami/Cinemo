@@ -36,7 +36,7 @@ namespace Cinemo
                 return employees;
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 SLLoader.IsVisible = false;
                 throw;
