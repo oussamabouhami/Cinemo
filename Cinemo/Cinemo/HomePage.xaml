@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Cinemo="clr-namespace:Cinemo;assembly=Cinemo"
+            BarTextColor="White" BarBackgroundColor="#903749" Title="Cinemo"
+             x:Class="Cinemo.HomePage">
+    <Cinemo:NowPlayingPage Title="Now Playing Movies"></Cinemo:NowPlayingPage>
+    <Cinemo:UpComingPage Title="Up Coming Movies"></Cinemo:UpComingPage>
+    
+</TabbedPage>

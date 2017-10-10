@@ -13,7 +13,7 @@ namespace Cinemo
         {
             InitializeComponent();
 
-            MainPage = new Cinemo.MainPage();
+            MainPage = new NavigationPage (new Cinemo.HomePage());
         }
 
         protected override void OnStart()
