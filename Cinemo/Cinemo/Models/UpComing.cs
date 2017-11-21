@@ -15,8 +15,10 @@ namespace Cinemo.Models
             public string Cast { get; set; }
             public string Description { get; set; }
             public string MovieLanguage { get; set; }
+
             public DateTime ReleaseDate { get; set; }
             public string RatedPGI { get; set; }
+
             public string MovieType { get; set; }
             public string TrailorLink { get; set; }
             public string Logo { get; set; }
